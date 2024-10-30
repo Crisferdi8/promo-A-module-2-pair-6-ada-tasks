@@ -11,3 +11,15 @@ const tasks = [
   },
 ];
 console.log(tasks);
+
+
+const list = document.querySelector(".listTask");
+
+for (const task of tasks) {
+  list.innerHTML += `
+  <li> <input id="${task.id}" type="checkbox">
+  ${task.name} 
+  </li>
+ `
+  console.log(task);
+}
