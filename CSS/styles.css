@@ -1,7 +1,19 @@
+.containers {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
 .listTask {
-    display: flex;
+  display: flex;
 }
 
 .checked {
-    text-decoration: line-through;
+  text-decoration: line-through;
+}
+
+.listStyle {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
 }

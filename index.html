@@ -12,15 +12,19 @@
 <body>
     <header>Ada Task</header>
     <main>
-        <form action="">Añadir tareas</form>
-        <label for="newtask">Nueva tarea</label>
-        <input id="newtask" type="text">
-        <button type="submit">Agregar</button>
-        <form action="">Lista de tareas</form>
-        <ul class="listTask">
-
+        <div class="containers">
+        <fieldset>
+            <form action="">Añadir tareas</form>
+            <label for="newtask">Nueva tarea</label>
+            <input id="newtask" type="text">
+        </fieldset>
+        <fieldset>
+            <button type="submit">Agregar</button>
+            <form action="">Lista de tareas</form>
+            <ul class="listTask listStyle">
         </ul>
-
+    </fieldset>
+</div>
     </main>
     <script src="./main.js"></script>
 </body>

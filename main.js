@@ -12,7 +12,6 @@ const tasks = [
 ];
 console.log(tasks);
 
-
 const list = document.querySelector(".listTask");
 const checked = document.querySelector(".checked");
 const inputCheck = document.querySelector(".inputCheck");
@@ -21,15 +20,16 @@ for (const task of tasks) {
   list.innerHTML += `
   <li> <input class="inputCheck" id="${task.id}" type="checkbox">
   ${task.name} 
-  </li>
- `
+  </li> 
+ `;
   console.log(task);
 }
-function handleClick() {
-  inputCheck.classList.add("checked");
+
+function handleClick(event) {
+  if (event.target.classList.contains("inputCheck")) {
+    const listItem = event.target.parentElement;
+    listItem.classList.toggle("checked");
+  }
 }
 
-
-
-
-inputCheck.addEventListener("click", handleClick);
+list.addEventListener("click", handleClick);
