@@ -14,12 +14,22 @@ console.log(tasks);
 
 
 const list = document.querySelector(".listTask");
+const checked = document.querySelector(".checked");
+const inputCheck = document.querySelector(".inputCheck");
 
 for (const task of tasks) {
   list.innerHTML += `
-  <li> <input id="${task.id}" type="checkbox">
+  <li> <input class="inputCheck" id="${task.id}" type="checkbox">
   ${task.name} 
   </li>
  `
   console.log(task);
 }
+function handleClick() {
+  inputCheck.classList.add("checked");
+}
+
+
+
+
+inputCheck.addEventListener("click", handleClick);
