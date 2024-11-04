@@ -8,7 +8,6 @@ let tasks = [];
 const list = document.querySelector(".listTask");
 const checked = document.querySelector(".checked");
 const inputCheck = document.querySelector(".inputCheck");
-<<<<<<< HEAD
 const inputNewTask = document.querySelector(".input");
 const button = document.querySelector(".js-btn-newTask");
 
@@ -40,7 +39,6 @@ function handleClick() {
 
 
 inputCheck.addEventListener("click", handleClick);
-=======
 fetch(SERVER_URL)
   .then((response) => {
     return response.json();
@@ -67,4 +65,3 @@ function handleClick(event) {
 }
 
 list.addEventListener("click", handleClick);
->>>>>>> c53db1ac9a7b1c6100af32a00b28b365a84df39d
