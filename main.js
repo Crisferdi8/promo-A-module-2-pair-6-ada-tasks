@@ -16,20 +16,34 @@ console.log(tasks);
 const list = document.querySelector(".listTask");
 const checked = document.querySelector(".checked");
 const inputCheck = document.querySelector(".inputCheck");
+const inputNewTask = document.querySelector(".input");
+const button = document.querySelector(".js-btn-newTask");
 
-for (const task of tasks) {
-  list.innerHTML += `
+const handleNewTask = (event) => {
+  event.preventDefault();
+  const newTask = inputNewTask.value;
+  const addTask = {
+    name: `${newTask}`,
+    completed: false,
+
+  }
+  tasks.push(addTask);
+  console.log(handleNewTask);
+
+  for (const task of tasks) {
+    list.innerHTML += `
   <li> <input class="inputCheck" id="${task.id}" type="checkbox">
   ${task.name} 
   </li>
  `
-  console.log(task);
-}
+  }
+
+};
+button.addEventListener("click", handleNewTask);
+
 function handleClick() {
   inputCheck.classList.add("checked");
 }
-
-
 
 
 inputCheck.addEventListener("click", handleClick);
