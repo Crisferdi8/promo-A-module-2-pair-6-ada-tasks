@@ -1,8 +1,25 @@
+.containers {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
 .listTask {
-    display: flex;
+  display: flex;
 }
 
 .checked {
+<<<<<<< HEAD
     text-decoration: line-through;
 
 }
+=======
+  text-decoration: line-through;
+}
+
+.listStyle {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+>>>>>>> c53db1ac9a7b1c6100af32a00b28b365a84df39d
