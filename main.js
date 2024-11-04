@@ -8,7 +8,6 @@ let tasks = [];
 const list = document.querySelector(".listTask");
 const checked = document.querySelector(".checked");
 const inputCheck = document.querySelector(".inputCheck");
-
 fetch(SERVER_URL)
   .then((response) => {
     return response.json();
